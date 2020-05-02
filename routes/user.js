@@ -1,12 +1,9 @@
+// routes/user.js
 const express = require("express");
 const router = express.Router();
 
-// router.get("/", (req, res) => {
-//     res.send("<h2>Hello from router</h2>");
-// });
+const { signup } = require("../controllers/user");
 
-const {sayHi} = require("../controller/user.js");
-
-router.get('', sayHi);
+router.post("/signup", signup);
 
 module.exports = router;
